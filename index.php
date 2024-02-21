@@ -1,4 +1,7 @@
 <?php
+
+    //# Array
+
     $hotels = [
         [
             'name' => 'Hotel Belvedere',
@@ -36,6 +39,11 @@
             'distance_to_center' => 50
         ],
     ];
+
+    //# Check and Cross
+    $check = '<i class="fa-solid text-success fa-circle-check"></i>';
+    $cross = '<i class="fa-solid text-danger fa-circle-xmark"></i>';
+
 ?>
 
 <!DOCTYPE html>
@@ -71,7 +79,7 @@
                     <tr>
                         <td><?= $hotel['name'] ?></td>
                         <td><?= $hotel['description'] ?></td>
-                        <td><?= $hotel['parking'] ? 'Si' : 'No' ?></td>
+                        <td><?= $hotel['parking'] ? $check : $cross ?></td>
                         <td><?= $hotel['vote'] ?></td>
                         <td><?= $hotel['distance_to_center'] ?> km</td>
                     </tr>
