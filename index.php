@@ -54,7 +54,31 @@
 </head>
 
 <body>
-
+    <div class="container mt-4">
+        <h1 class="mb-4 text-center">Hotel</h1>
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th>Nome</th>
+                    <th>Descrizione</th>
+                    <th>Parcheggio</th>
+                    <th>Voto</th>
+                    <th>Distanza dal centro</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($hotels as $hotel): ?>
+                    <tr>
+                        <td><?= $hotel['name'] ?></td>
+                        <td><?= $hotel['description'] ?></td>
+                        <td><?= $hotel['parking'] ? 'Si' : 'No' ?></td>
+                        <td><?= $hotel['vote'] ?></td>
+                        <td><?= $hotel['distance_to_center'] ?> km</td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
 </body>
 
 </html>
